@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import * as actions from '../../actions'; 
+import * as actions from '../../actions';
 
 import AccountInformation from './accountInformation';
 import PurchaseHistory from './purchaseHistory';
@@ -10,29 +10,42 @@ class Account extends Component {
 
     componentDidMount() {
 
-        const navbarLinks = [
-            {   
-                id: 0,
-                title: 'Purchase History',
-                active: false,
-                component: <PurchaseHistory />
+        const headerLinks = [
+            {
+                _id: 0, 
+                title: 'Shop',
+                path: '/shop'
             },
             {
-                id: 1,
-                title: 'Account Information',
-                active: true,
-                component: <AccountInformation />
+                _id: 1, 
+                title: 'Logout',
+                path: '/'
             }
         ]
 
-        this.props.setHeaderLinks([]);
+        const navbarLinks = [
+            {
+                _id: 0,
+                title: 'Purchase History',
+                active: false,
+                component: <PurchaseHistory/>
+            },
+            {
+                _id: 1,
+                title: 'Account Information',
+                active: true,
+                component: <AccountInformation/>
+            }
+        ]
+
+        this.props.setHeaderLinks(headerLinks);
         this.props.setNavbarLinks(navbarLinks);
     }
 
     renderContent() {
         let jsx;
         if(this.props.navbarLinks) {
-            this.props.navbarLinks.map(link => {
+            this.props.navbarLinks.forEach(link => {
                 if(link.active) {
                     jsx = link.component;
                 }
@@ -44,7 +57,7 @@ class Account extends Component {
     render() {
         return (
             <div>
-                {this.renderContent() }
+                { this.renderContent() }
             </div>
         )
     }
@@ -52,7 +65,7 @@ class Account extends Component {
 
 function mapStateToProps(state) {
     const { headerLinks, navbarLinks } = state.headerNavbar;
-    return { headerLinks, navbarLinks }  
+    return { headerLinks, navbarLinks }
 }
 
 Account = connect(mapStateToProps, actions)(Account);
