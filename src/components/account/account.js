@@ -12,12 +12,12 @@ class Account extends Component {
 
         const headerLinks = [
             {
-                _id: 0, 
+                _id: 0,
                 title: 'Shop',
                 path: '/shop'
             },
             {
-                _id: 1, 
+                _id: 1,
                 title: 'Logout',
                 path: '/'
             }

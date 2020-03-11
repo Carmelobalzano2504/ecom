@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 class PurchaseDetail extends Component {
@@ -6,7 +7,7 @@ class PurchaseDetail extends Component {
 
         return (
             <div className={`${className} purchase-detail`}>
-                purchase details go here
+                purchase detail goes here
             </div>
         )
     }
