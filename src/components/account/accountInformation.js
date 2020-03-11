@@ -4,7 +4,7 @@ import PageTitle from '../pageTitle';
 import AccountInformationForm from './accountInformationForm';
 
 class AccountInformation extends Component {
-    
+
     onSubmit = (fields) => {
         console.log(fields);
     }
@@ -12,8 +12,8 @@ class AccountInformation extends Component {
     render() {
         return (
             <div className='account-information'>
-               <PageTitle className='account-information' title='Account Information'/>
-               <AccountInformationForm onSubmit={this.onSubmit} className='account-information__form' />
+                <PageTitle className='account-information' title='Account Information'/>
+                <AccountInformationForm onSubmit={this.onSubmit} className='account-information__form' />
             </div>
         )
     }
