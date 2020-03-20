@@ -2,7 +2,6 @@ import {
     SET_USER_PURCHASES,
     SET_PURCHASE_DETAIL
 } from '../actions/types';
-import PurchaseDetail from '../components/account/purchaseDetail';
 
 const INITIAL_STATE = {
     purchases: [],
@@ -26,7 +25,6 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 purchases: action.payload
             }
-        
         case SET_PURCHASE_DETAIL:
             let purchaseDetail;
             state.purchases.map(purchase => {

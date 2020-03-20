@@ -53,9 +53,9 @@ class SignInForm extends Component {
                     name='login' 
                     type='submit' 
                     title='Login' 
-                    component={FormButton} />
-                    <Details className='sign-in-form__details' title='QuickLinks' links={links}/>
-                />              
+                    component={FormButton} 
+                />
+                <Details className='sign-in-form__details' title='QuickLinks' links={links}/>            
             </form>
         )
     }
