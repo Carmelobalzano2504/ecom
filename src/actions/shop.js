@@ -15,7 +15,7 @@ export function filterProductsWithCategoryId(_id) {
 export function fetchShopCategories() {
     return ({
         type: SET_SHOP_CATEGORIES,
-            payload: [
+        payload: [
             {
                 _id: 0,
                 title: 'All'
@@ -45,7 +45,7 @@ export function fetchShopCategories() {
                 title: 'Ruby'
             },
         ]
-      
+
     })
 }
 
