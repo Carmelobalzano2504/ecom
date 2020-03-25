@@ -48,7 +48,7 @@ class ShopCart extends Component {
         return (
             <div className={`${className} shop-cart`}>
                 <CartButton className='shop-cart__toggle' icon='fas fa-times'/>
-                <CartContent className='shop-cart__content' products={[243, 3434, 4554]}/>
+                <CartContent className='shop-cart__content' products={[243, 3434, 4554, 1010, 24, 8, 69,22,14,11,8]}/>
             </div>
         )
     }
