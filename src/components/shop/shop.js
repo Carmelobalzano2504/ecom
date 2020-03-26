@@ -43,7 +43,7 @@ class Shop extends Component {
     }
 
     render() {
-         
+        // <ShopCart className='shop__cart'/>
 
         return (
             <div className='shop'>
@@ -57,8 +57,10 @@ class Shop extends Component {
                         })
                     }
                 </div>
-                <ShopCart className='shop__cart'/>
-                
+                {
+                    this.state.showCart ? <ShopCart className='shop__cart' /> : ''
+                }
+                                
                 {/* shop cart button */}
             </div>
         )
