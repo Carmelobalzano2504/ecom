@@ -5,7 +5,7 @@ import { reduxForm, Field } from 'redux-form';
 function FormSearchBar(props) {
     return (
         <div className='search-bar-grid'>
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
             <input className={`${props.className} form-search-bar search-bar-grid__input`} {...props.input} type='text' placeholder={`${props.placeholder}`} />
         </div>
     )
